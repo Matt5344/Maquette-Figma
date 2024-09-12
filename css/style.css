@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('global.css'); /*Permet de relier le css global au css spécifique pour mieux s'y retrouver*/
+@import url('sections/header.css');
+@import url('sections/main.css');
+@import url('sections/footer.css');
+@import url('sections/responsive.css');
+
+:root { /*permet de prendre toute la page html (élément racine), donc on créer une variable réutilisable*/
+
+    --roboto: "Roboto", sans-serif;
+
+    --primary-color: 0, 0, 0; /*Permet de changer la valeur de l'opacité contrairement au #000*/
+    --secondary-color: 255, 255, 255;
+
+
+    --blue-color: 31, 132, 239;
+    --red-color: 227, 7, 68;
+    --yellow-color: 255, 210, 0;
+    --green-color: 6, 224, 127;
+
+    --headline-font-size: 42px;
+    --headline-font-weight: 700;
+
+    --subheadline-font-size: 22px;
+    --subheadline-font-weight: 400;
+
+    --body-font-size: 18px;
+}

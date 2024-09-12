@@ -1,0 +1,105 @@
+.header{
+    width: 100%;
+    min-height: 75px; /*pour que la nav reste tous le temps a 75px minimum meme en responsive*/
+    
+    display: flex;  /*pour avoir le controle sur les éléments du header*/
+    justify-content: center; /*pour centrer la nav dans le header qui lui prend 100% de la page*/
+    align-items: center;
+
+    border-bottom: 2px solid rgb(var(--primary-color), 0.2); /*Ajout de la barre en dessous du nav avec opacité de 20%*/
+}
+
+.header__nav {
+    width: 100%;
+    max-width: 1120px; /*Taille sur la maquette dans la section NAV*/
+
+    display: flex; /*Pour mettre tous les éléments les un a coté des autres */
+    justify-content: space-between; /*pour mettre le logo et les boutons chacun a une extrémitée*/
+    align-items: center; /*Pour aligner horizontalement*/
+    padding: 0px 10px; /*pour éviter que le logo et le bouton colle a gauche et droite quand on réduit la page*/
+}
+
+.nav__logo { /*comment doit ce comporter le logo entier*/
+    display: flex;
+    align-items: center; /*centrer les éléments au centre*/
+    gap: 14px ; /*séparer le logo et le nom*/
+}
+
+.nav__logo-img { 
+    width: 100px;
+    height: auto; /*pour garder les proportions de l'image*/
+}
+
+.nav__logo-title {
+    font-size: var(--subheadline-font-size);
+}
+
+.nav__auth {
+    display: flex; /*meme si les deux boutons sont cote a cote, on met flex pour activer les autres propriétés*/
+    gap: 24px; /*espace entre les boutons*/
+}
+
+.nav__auth-button { /*propriétés communes aux deux boutons*/
+    padding: 10px; /*agrandir l'intérieur des boutons*/
+    font-size: var(--body-font-size); /*var faite dans style.css pour gagner du temps*/
+    border: none; /*enlever les bordures autour des boutons*/
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.nav__auth-button--signin { /* propriétés bouton Connexion */
+    background-color: transparent;
+}
+
+.nav__auth-button--signup { /* propriétés bouton Essayer PrimePrompts */
+    padding: 10px 20px; /*Plus grand padding pour ce bouton la avec en bas et en haut également*/
+    background-color: rgb(var(--primary-color)); /* couleur noir */
+    color: rgb(var(--secondary-color)); /* couleur blanche */
+}
+
+.nav__auth-button--signin:hover { /* propriétés bouton au passage de la souris*/
+    background-color: #DDDDDD;
+}
+
+.nav__auth-button--signup:hover { 
+    background-color: rgb(var(--primary-color), 0.6); /*opacité a 60% au passage de la souris*/
+}
+
+.nav__mobile-menu { /*le menu 3 barres*/
+    display: none; /*faire disparaitre le menu de base*/
+}
+
+.mobile-menu { /*CSS du menu mobile quand il apparait*/
+    position: fixed;
+    top: 0;
+    right: -100%; /*sortir de l'écran de -100*/
+    width: 100%;
+    height: 100%;
+    background-color: rgb(var(--secondary-color));
+    box-shadow: -2px 0px 8px rgb(var(--primary-color), 0.1);
+    z-index: 1000; /*pour etre sur qu'il soit au dessus de tout*/
+    transition: right 0.3s ease;
+}
+
+.mobile-menu__nav { /*propriétés des deux boutons du menu*/
+    display: flex;
+    flex-direction: column; /*mettre les deux boutons l'un en dessous de l'autre*/
+    align-items: center; /*au centre de la page*/
+    gap: 20px;
+    margin-top: 60px; /*pour créer espace en dessus des boutons pour le haut*/
+}
+ 
+.mobile-menu__close { /*design de la croix de fermeture du menu*/
+    position: absolute;
+    top: 20px;
+    right: 20px; /*décaler de la droite a 20px*/
+    background: none; /*c'est un bouton a la base donc on enleve le fond*/
+    border: none;
+    font-size: 30px; /*agrandir le bouton a 30px*/
+    cursor: pointer;
+}
+
+.mobile-menu--open { /*on va utiliser ceci en js pour faire apparaitre élément car de base il est a l'extérieur de l'écran*/
+    right: 0;
+}

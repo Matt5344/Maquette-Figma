@@ -1,0 +1,60 @@
+/*NAV*/
+@media (max-width: 768px) { /*comment doit ce comporter la page jusqu'a 768px max*/
+    .nav__logo-img { /*le logo de la page*/
+        width: 75px;
+    }
+
+    .nav__auth { /*bouton connexion et essayer*/
+        display: none; /*faire disparaitre les deux boutons*/
+    }
+
+    .nav__mobile-menu { /*faire apparaitre le menu burger a droite de la page*/
+        display: block;
+    }
+}
+
+/*MAIN*/
+
+@media (max-width: 768px) {
+    .main__hero-title span { /*faire disparaitre le texte que l'on a rajouter dans la span*/
+        display: none;
+    }
+
+    .main__hero-description { /*faire disparaitre la description de base*/
+        display: none;
+    }
+
+    .main__hero-description-mobile { /*Faire apparaitre la description du responsive*/
+        display: block;
+    }
+
+    .main__features { /*pour selectionner toutes les features*/
+        grid-template-columns: 1fr; /*permet de mettre les features les une en dessous des autres*/
+    }
+}
+
+
+/*FOOTER*/
+
+@media (max-width: 1024px) {
+    .footer {
+        height: 300px;
+    }
+
+    .footer__container {
+        flex-direction: column; /*Pour faire passer le logo en dessous des mentions*/
+        gap: 50px;
+        padding: 20px 10px; /*pour créer espace vide en dessus et en dessous des éléments collé aux bordures du footer*/
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__logo-img { /*diminuer taille du logo en responsive*/
+        width: 75px;
+    }
+
+    .footer__legal { /*pour selectionner les mentions*/
+        flex-direction: column-reverse; /*mettre les mentions en dessous des unes des autres et mettre la politique en première*/
+        align-items: center; /*centrer les éléments*/
+    }
+}

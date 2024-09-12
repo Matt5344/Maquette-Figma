@@ -1,0 +1,64 @@
+.footer { /*propriétés pour le footer en général*/
+    width: 100%;
+    height: 150px; /*hauteur donnée sur la maquette figma*/
+
+    display: flex; /*Pour pouvoir center le footercontainer*/
+    justify-content: center;
+
+    color: rgb(var(--secondary-color)); /*en blanc*/
+    background-color: rgb(var(--primary-color)); /*en noir*/
+}
+
+.footer__container {
+    width: 100%;
+    max-width: 1120px; /*max comme les autres a 1120px*/
+
+    display: flex; /*pour déplacer les éléments et les mettres les un a coté des autres*/
+    justify-content: space-between; /*je sépare les mentions et le logo ect */
+    align-items: center; /*centrer verticalement dans le container*/
+
+    padding: 0 10px;
+}
+
+.footer__legal {
+    display: flex; /*mettre les un a coté des autres*/
+    gap: 24px; /*espacer les mentions politiques ect entre elles*/
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column; /*pour que le logo soit au dessus des autres éléments*/
+    gap: 22px; /*séparation entre logo et titre des icons*/
+}
+
+.footer__logo { /*contient le logo et le titre*/
+    display: flex;
+    align-items: center; /*centrer verticalement*/
+    gap: 14px; /*espace entre logo et titre*/
+}
+
+.footer__logo-img { /*le logo image*/
+    width: 100px;
+    height: auto;
+}
+
+.footer__logo-title { /*le titre*/
+    font-size: var(--subheadline-font-size);
+}
+
+.footer__socials { /*la div des icons*/
+    width: 100%; /*pour quel prenne toute la largeur de la div parent*/
+    display: flex;
+    justify-content: space-between; /*espacer les différents logo dans la largeur de la div*/
+}
+
+.footer__social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer__social-icon {
+    width: 24px;
+    height: 24px;
+}

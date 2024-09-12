@@ -1,0 +1,112 @@
+.main { /*propriétés pour toutes la section main*/
+    display: flex; /*les enfants de main sont en display flex*/
+    justify-content: center; /*Mettre tous les éléments au centre*/
+    flex: 1; /*permet de prendre la taille restante pour ce placer et ce centrer*/
+}
+
+.main__container {
+    width: 100%;
+    max-width: 1120px; /*comme la nav bar on limite la largeur*/
+
+    display: flex;
+    flex-direction: column; /*les un en dessous des autres*/
+
+    align-items: center; /*centrer au milieu de la page*/
+    justify-content: space-around; /*créer un espace vide a chaque fois entre les éléments avant et apres*/
+
+    padding: 20px 10px; /*pour décoller les éléments de la nav*/
+    gap: 30px; /*Pour créer un espace entre feature et bouton quand l'écran est en dessous de 768px*/
+}
+
+.main__hero { /*propriétés, de "organisez... au bouton "essayez primeprompts*/
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /*espace entre chaque élément de la div*/
+    align-items: center;
+    justify-content: center;
+}
+
+/*POUR CREER ANIMATION JS MAIS PAS ESSENTIEL AU CODE DE BASE POUR UN SITE CLASSIQUE*/
+.main__hero-title,
+.main__hero-description,
+.main__hero-description-mobile,
+.main__hero-button,
+.main__feature {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-out;
+}
+
+.main__hero-title { /*titre de la div main hero*/
+    font-size: var(--headline-font-size); /*Utilisation de la var pour la taille du texte*/
+    font-weight: var(--headline-font-weight); /*Utilisation de la var pour grosseur du texte*/
+}
+
+.main__hero-description,
+.main__hero-description-mobile {
+    font-size: var(--subheadline-font-size);
+    font-weight: var(--subheadline-font-weight);
+    text-align: center;
+}
+
+.main__hero-description-mobile { /*changer le texte pour le responsive*/
+    display: none; /*faire disparaitre au dessus de 768px*/
+}
+
+.main__hero-button {
+    padding: 10px 15px; /*padding dans le bouton pour l'agrandir*/
+    font-size: var(--body-font-size);
+    background-color: rgb(var(--blue-color)); /*var couleur créer dans style.css*/
+    color: rgb(var(--secondary-color)); /*couleur blanche*/
+    border: none;
+    border-radius: 10px;
+    transition: all 300ms; /*faire apparaitre le bouton avec une transition*/
+    cursor: pointer;
+}
+
+.main__hero-button:hover {
+    background-color: rgb(var(--blue-color), 0.8); /*var couleur créer dans style.css*/
+}
+
+.main__features {
+    width: 100%;
+    display: grid; /*pour utilisation des grilles a la place de flex*/
+    grid-template-columns: 1fr 1fr 1fr; /*chaque colonnes fait 1fr*/
+    /*grid permet que si l'on veut rajouter des grilles elles se mettrons en bas a la suite automatiquement*/
+    gap: 16px; /*espace entre les éléments*/
+    transform: translateY(20px); /*déplacer l'élément pour créer une animation avec js*/
+}
+
+.main__feature { /*pour personnaliser chaque élément de la grille*/
+    display: flex;
+    flex-direction: column; /*pour mettre logo en dessus et texte en dessous dans la grille*/
+    padding: 20px;
+    gap: 20px; /*séparer logo de description*/
+    border-radius: 10px;
+    color: rgb(var(--secondary-color)); /*mettre le texte en blanc*/
+    
+}
+
+.main__feature-icon { /*propriété des icons dans les grilles*/
+    width: 50px; /*taille des icons*/
+    height: auto; /*hauteur des icons*/
+}
+
+.main__feature-title { /*titre de chaque feature*/
+    font-size: var(--subheadline-font-size);
+}
+
+.main__feature-description { /*description de chaque feature*/
+    font-size: var(--body-font-size);
+}
+
+.main__feature--add {
+    background-color: rgb(var(--red-color));
+}
+
+.main__feature--sort {
+    background-color: rgb(var(--green-color));
+}
+
+.main__feature--manage {
+    background-color: rgb(var(--yellow-color));
+}
